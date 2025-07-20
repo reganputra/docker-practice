@@ -12,7 +12,11 @@ FROM alpine:3.20 AS base
 
 WORKDIR /app
 
+RUN addgroup -S goweb && adduser -S goweb -G goweb
+
 COPY --from=builder /app/main .
+
+USER goweb
 
 EXPOSE 8080
 
