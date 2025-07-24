@@ -1,0 +1,7 @@
+# Ignore GitLab configuration, data, and log directories
+config/
+data/
+logs/
+
+# Ignore GitLab Runner configuration
+.gitlab-runner
